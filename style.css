@@ -1,0 +1,90 @@
+/* Reset & generic styles */
+
+:root{
+	font-size: 16px;
+}
+
+*{
+	letter-spacing: 1;
+	line-height: 2;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+}
+
+/* Layout */
+html{
+	height: 100%; 
+}
+body{
+	height: 100%;
+
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.container{
+	display: grid;
+	grid-template-columns: repeat(16, 25px);
+	grid-template-rows: repeat(16, 25px);
+
+	grid-gap: 5px;
+	padding: 5px;
+	background: #000;
+}
+
+/* Internal Styles*/
+
+h1{
+	text-align: center;
+}
+
+.container>div{
+	animation-name: fillColor;
+	animation-duration: 3ms;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;    
+}
+.container>div:hover{
+	animation-play-state: running;
+}
+
+@keyframes fillColor {
+	from{
+		background-color: #fff;
+	}
+	to{
+		background-color: tomato;
+	}
+}
+
+button.reset{
+	margin: 1rem;
+	padding: 1rem;
+	background: #000;
+	color: #fff;
+	border: none;
+	text-transform: uppercase
+}
+
+button.reset:hover{
+	animation-name: shakeIt;
+	animation-duration: .1s;
+	animation-iteration-count: 3;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes shakeIt {
+	from {
+		transform: translateX(-5px);
+	}
+	to {
+		transform: translateX(5px);
+	}
+}
