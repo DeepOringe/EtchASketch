@@ -27,7 +27,7 @@ body{
 	justify-content: center;
 	align-items: center;
 }
-.container{
+#container{
 	display: grid;
 	grid-template-columns: repeat(16, 25px);
 	grid-template-rows: repeat(16, 25px);
@@ -43,14 +43,14 @@ h1{
 	text-align: center;
 }
 
-.container>div{
+#container>div{
 	animation-name: fillColor;
-	animation-duration: 3ms;
+	animation-duration: 1ms;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 	animation-play-state: paused;    
 }
-.container>div:hover{
+#container>div:hover{
 	animation-play-state: running;
 }
 
